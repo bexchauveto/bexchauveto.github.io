@@ -1,0 +1,104 @@
+<h2> Ma Galerie</h2>
+
+<div class='menu-gal'>
+
+<button id='bouton-all'><span>Tout</span></button>
+<button id='bouton-musique'><span>Musique</span></button>
+<button id='bouton-film'><span>Film</span></button>
+<button id='bouton-serie'><span>Serie</span></button>
+<button id='bouton-jeux-videos'><span>Jeux-vidéos</span></button>
+<button id='bouton-voyages'><span>Voyages</span></button>
+</div>
+<div id='description-gal'></div>
+
+<div id='gal'>
+	<a id='gal-musique-led-zep'><img class='gal-musique-medium' alt='musique' src='./images/musique/led-zep-iv.jpg'></a>
+	<img class='gal-musique-medium' alt='musique' src='./images/musique/front_cover.jpg'>
+	<img class='gal-serie-medium' alt='serie' src='./images/serie/doctor-who.jpg'>
+	<img class='gal-musique-medium' alt='musique' src='./images/musique/led-zep-iv.jpg'>
+	<img class='gal-film-medium' alt='film' src='./images/film/back-to-the-future.jpg'>
+	<img class='gal-jeux-videos-medium' alt='Jeux-vidéos' src='./images/jeuxvideo/image_starcraft_2.jpg'>
+	<img class='gal-serie-medium' alt='serie' src='./images/serie/doctor-who.jpg'>
+	<img class='gal-jeux-videos-medium' alt='Jeux-vidéos' src='./images/jeuxvideo/image_starcraft_2.jpg'>
+	<img class='gal-musique-medium' alt='musique' src='./images/musique/front_cover.jpg'>
+	<img class='gal-serie-medium' alt='serie' src='./images/serie/doctor-who.jpg'>
+	<img class='gal-jeux-videos-medium' alt='Jeux-vidéos' src='./images/jeuxvideo/image_starcraft_2.jpg'>
+	<img class='gal-musique-medium' alt='musique' src='./images/musique/front_cover.jpg'>
+	<img class='gal-voyages-medium' alt='musique' src='./images/musique/front_cover.jpg'>
+</div>
+<div id='popup'></div>
+<script type="text/javascript">
+	$(function(){
+		$('img[class^="gal"]').show();
+		$('#description-gal').load('./Vue/description-gal.html');
+		$('#bouton-musique').click(function(){
+			$('img[class^="gal-musique"]').show();
+			$('img[class^="gal-film"]').hide();
+			$('img[class^="gal-serie"]').hide();
+			$('img[class^="gal-jeux-videos"]').hide();
+			$('img[class^="gal-voyages"]').hide();
+			$.ajax({
+                type: 'GET',
+                url: './Vue/description-gal-musique.html',
+                timeout: 3000,
+                success: function(data) {
+                  $('#description-gal').html(data); },
+               error: function() {
+                   alert('The query doesn\'t work'); }
+            });
+		});
+		$('#bouton-film').click(function(){
+			$('img[class^="gal-film"]').show();
+			$('img[class^="gal-musique"]').hide();
+			$('img[class^="gal-serie"]').hide();
+			$('img[class^="gal-jeux-videos"]').hide();
+			$('img[class^="gal-voyages"]').hide();
+		});
+		$('#bouton-serie').click(function(){
+			$('img[class^="gal-serie"]').show();
+			$('img[class^="gal-film"]').hide();
+			$('img[class^="gal-musique"]').hide();
+			$('img[class^="gal-jeux-videos"]').hide();
+			$('img[class^="gal-voyages"]').hide();
+		});
+		$('#bouton-jeux-videos').click(function(){
+			$('img[class^="gal-jeux-videos"]').show();
+			$('img[class^="gal-film"]').hide();
+			$('img[class^="gal-serie"]').hide();
+			$('img[class^="gal-musique"]').hide();
+			$('img[class^="gal-voyages"]').hide();
+		});
+		$('#bouton-voyages').click(function(){
+			$('img[class^="gal-voyages"]').show();
+			$('img[class^="gal-jeux-videos"]').hide();
+			$('img[class^="gal-film"]').hide();
+			$('img[class^="gal-serie"]').hide();
+			$('img[class^="gal-musique"]').hide();
+		});
+		$('#bouton-all').click(function(){
+			$.ajax({
+                type: 'GET',
+                url: './Vue/description-gal.html',
+                timeout: 3000,
+                success: function(data) {
+                  $('#description-gal').html(data); },
+               error: function() {
+                   alert('The query doesn\'t work'); }
+            });
+			$('img[class^="gal-musique"]').show();
+			$('img[class^="gal-film"]').show();
+			$('img[class^="gal-serie"]').show();
+			$('img[class^="gal-jeux-videos"]').show();
+			$('img[class^="gal-voyages"]').show();
+		});
+		
+		$('#popup').hide();
+		$('#gal-musique-led-zep').click(function(){
+			$('#popup').bPopup({
+				content:'ajax',
+	  			contentContainer:'#popup',
+	            loadUrl: './Vue/ledzep.html'
+			})
+		});
+	});
+</script>

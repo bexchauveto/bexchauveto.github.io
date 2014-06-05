@@ -1,0 +1,87 @@
+<h2>Mes Réalisations</h2>
+
+<u><h3>Application mobile et site de gestion de contenu pour la British Human Computer Interaction 2014</h3></u>
+
+<div id='desc-projet1'>
+  <p>Ce projet d'application mobile s'est vraiment divisé en deux partie, l'application sur le mobile
+  et le site internet de gestion de contenu, en effet, les organisateurs peuvent rentrer les informations,
+  les mettre à jour si nécessaire, et cela sans avoir à programmer quoi que ce soit, juste à
+  remplir des formulaires. L'application est réalisée pour que l'utilisateur soit les informations les
+  plus utiles en premiers.</p>
+  <p>L'application mobile est développée avec Apache Cordova, ce qui permet un développement
+  multi-plateformes en utilisant seulement les outils du web comme le HTML5, le CSS3 et le
+  JavaScript, pour l'application la librairie JavaScript est Angularjs.</p>
+  <p>Le site internet quant à lui est développé en utilisant le HTML5, le CSS3, le PHP et du
+  JQuery comme librairie JavaScript. Il utilise une base de données MySQL et est développé en
+  utilisant le patron MVC.</p>
+  <p>La liaison entre le site internet et l'application se fait en utilisant des fichiers au format Json.<p>
+</div>
+<div id='txtprojet1'></div>
+<div class='bouton-centre'>
+	<button id='plusprojet1'><span id='button-text-projet1'>En savoir plus</span></button>
+</div>
+<div class='div-tag'>
+  <p><input type="button" class='bouton-tag' disabled="disabled" value='PHP'/> <input type="button" class='bouton-tag' disabled="disabled" value='Apache Cordova'/> <input type="button" class='bouton-tag' disabled="disabled" value='HTML5'/> <input type="button" class='bouton-tag' disabled="disabled" value='CSS3'/> <input type="button" class='bouton-tag' disabled="disabled" value='Angularjs'/> <input type="button" class='bouton-tag' disabled="disabled" value='JQuery'/> <input type="button" class='bouton-tag' disabled="disabled" value='Json'/><p>
+</div>
+<br>
+<u><h3>Site internet pour une association</h3></u>
+
+<div id='desc-projet2'>
+  <p>Le projet intitulé “Création d’un site internet pour une association” est un site web dynamique qui présente les différentes activités de la chorale Nadalenca. Le site comporte une session visiteurs qui permet d’avoir un aperçu des activités de l’association, et de contacter les membres. Il possède également une session membres pour consulter les partitions et les profils des autres membres, mais également une session administrateurs qui permet de gérer le contenu du site web. </p>
+  <p>Le site est développé en PHP, HTML5, CSS3, JavaScript. Il utilise une base de données MySQL. Il suit le patron Modèle-Vue-Contrôleur (MVC). Il sera par la suite hébergé sur OVH. </p>
+</div>
+<div id='txtprojet2'></div>
+<div class='bouton-centre'>
+	<button id='plusprojet2'><span id='button-text-projet2'>En savoir plus</span></button>
+</div>
+<div class='div-tag'>
+  <p><input type="button" class='bouton-tag' disabled="disabled" value='HTML5'/> <input type="button" class='bouton-tag' disabled="disabled" value='CSS'/> <input type="button" class='bouton-tag' disabled="disabled" value='PHP'/> <input type="button" class='bouton-tag' disabled="disabled" value='MySql'/> <input type="button" class='bouton-tag' disabled="disabled" value='MVC'/><p>
+</div>
+
+
+
+
+<script type="text/javascript">
+	$(function() {
+		$('div[id^="txtprojet"]').hide();
+		$('div[id^="desc"]').show();
+         $('#plusprojet1').click(function(){
+         	$.ajax({
+            	type: 'GET',
+            	url: './Vue/projet1.html',
+            	timeout: 3000,
+            	success: function(data) {
+           			$('#txtprojet1').html(data);
+           			$('#txtprojet1').toggle();
+           			$('#desc-projet1').toggle();
+           			if($('#txtprojet1').is(':visible')){
+            			$('#button-text-projet1').text("Cacher les informations");
+            		}
+            		else{
+            			$('#button-text-projet1').text("En savoir plus");
+            		}},
+           		error: function() {
+               		alert('The query doesn\'t work'); }
+            });
+         });
+         $('#plusprojet2').click(function(){
+         	$.ajax({
+            	type: 'GET',
+            	url: './Vue/projet2.html',
+            	timeout: 3000,
+            	success: function(data) {
+           			$('#txtprojet2').html(data);
+           			$('#txtprojet2').toggle();
+           			$('#desc-projet2').toggle();
+           			if($('#txtprojet2').is(':visible')){
+            			$('#button-text-projet2').text("Cacher les informations");
+            		}
+            		else{
+            			$('#button-text-projet2').text("En savoir plus");
+            		}},
+           		error: function() {
+               		alert('The query doesn\'t work'); }
+            });
+         });
+    });
+</script>

@@ -1,0 +1,29 @@
+Serie : 
+-Doctor Who
+-Blackadder
+-Ghost in the shell
+-Kaamelott
+
+Film :
+-Back to the future
+-Jiro Dreams of sushi
+-Blade Runner
+-Star Wars
+
+Musique :
+-Dream Theater
+-Queen
+-Musiques Classiques (Bach, Strauss, Pachelbel,...)
+-Gojira
+
+Jeux-Vidéos :
+-Starcraft 2
+-Team Fortress 2
+-Civilization
+-Deus Ex
+
+Voyages :
+-Angleterre
+-Etats-Unis
+-Irlande
+-Asie
