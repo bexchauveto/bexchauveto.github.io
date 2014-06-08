@@ -27,3 +27,49 @@ Voyages :
 -Etats-Unis
 -Irlande
 -Asie
+
+
+<script type="text/javascript">
+	$(function() {
+		$('div[id^="txtprojet"]').hide();
+		$('div[id^="desc"]').show();
+         $('#plusprojet1').click(function(){
+         	$.ajax({
+            	type: 'GET',
+            	url: './Vue/projet1.html',
+            	timeout: 3000,
+            	success: function(data) {
+           			$('#txtprojet1').html(data);
+           			$('#txtprojet1').toggle();
+           			$('#desc-projet1').toggle();
+           			if($('#txtprojet1').is(':visible')){
+            			$('#button-text-projet1').text("Cacher les informations");
+            		}
+            		else{
+            			$('#button-text-projet1').text("En savoir plus");
+            		}},
+           		error: function() {
+               		alert('The query doesn\'t work'); }
+            });
+         });
+         $('#plusprojet2').click(function(){
+         	$.ajax({
+            	type: 'GET',
+            	url: './Vue/projet2.html',
+            	timeout: 3000,
+            	success: function(data) {
+           			$('#txtprojet2').html(data);
+           			$('#txtprojet2').toggle();
+           			$('#desc-projet2').toggle();
+           			if($('#txtprojet2').is(':visible')){
+            			$('#button-text-projet2').text("Cacher les informations");
+            		}
+            		else{
+            			$('#button-text-projet2').text("En savoir plus");
+            		}},
+           		error: function() {
+               		alert('The query doesn\'t work'); }
+            });
+         });
+    });
+</script>
