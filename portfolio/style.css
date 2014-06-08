@@ -235,9 +235,7 @@ h3{
 }
 
 #desc-projet1,
-#desc-projet2,
-#txtprojet1,
-#txtprojet2{
+#desc-projet2{
   padding-right: 90px;
   padding-left: 90px;
 }
@@ -306,4 +304,21 @@ h3{
 .menu-gal, #description-gal,
  {
   text-indent: 45px;
+}
+.dl-cv {
+  text-align: center;
+  color: #fff;
+}
+
+.cv-form,
+.cv-comp,
+.cv-exp{
+  text-indent: 90px;
+}
+.cv-form-list {
+  list-style:none;
+}
+
+.cv-comp-table {
+  padding-left: 10%;
 }
