@@ -301,8 +301,8 @@ h3{
   background-color:#000
 }
 
-.menu-gal, #description-gal,
- {
+.menu-gal,
+#description-gal {
   text-indent: 45px;
 }
 .dl-cv {

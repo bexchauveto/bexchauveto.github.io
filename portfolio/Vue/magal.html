@@ -12,19 +12,26 @@
 <div id='description-gal'></div>
 
 <div id='gal'>
-	<a id='gal-musique-led-zep'><img class='gal-musique-medium' alt='musique' src='./images/musique/led-zep-iv.jpg'></a>
-	<img class='gal-musique-medium' alt='musique' src='./images/musique/front_cover.jpg'>
-	<img class='gal-serie-medium' alt='serie' src='./images/serie/doctor-who.jpg'>
-	<img class='gal-musique-medium' alt='musique' src='./images/musique/led-zep-iv.jpg'>
-	<img class='gal-film-medium' alt='film' src='./images/film/back-to-the-future.jpg'>
-	<img class='gal-jeux-videos-medium' alt='Jeux-vidéos' src='./images/jeuxvideo/image_starcraft_2.jpg'>
-	<img class='gal-serie-medium' alt='serie' src='./images/serie/doctor-who.jpg'>
-	<img class='gal-jeux-videos-medium' alt='Jeux-vidéos' src='./images/jeuxvideo/image_starcraft_2.jpg'>
-	<img class='gal-musique-medium' alt='musique' src='./images/musique/front_cover.jpg'>
-	<img class='gal-serie-medium' alt='serie' src='./images/serie/doctor-who.jpg'>
-	<img class='gal-jeux-videos-medium' alt='Jeux-vidéos' src='./images/jeuxvideo/image_starcraft_2.jpg'>
-	<img class='gal-musique-medium' alt='musique' src='./images/musique/front_cover.jpg'>
-	<img class='gal-voyages-medium' alt='musique' src='./images/musique/front_cover.jpg'>
+	<a id='gal-serie-doctor'><img class='gal-serie-medium' alt='serie' src='./images/serie/doctor-who.jpg'></a>
+	<a id='gal-musique-dt'><img class='gal-musique-medium' alt='musique' src='./images/musique/DreamTheater.jpg'></a>
+	<a id='gal-voyages-londres'><img class='gal-voyages-medium' alt='voyages' src='./images/voyages/londres.jpg'></a>
+	<a id='gal-film-bttf'><img class='gal-film-medium' alt='film' src='./images/film/back-to-the-future.jpg'></a>
+	<a id='gal-jv-sc2'><img class='gal-jeux-videos-medium' alt='Jeux-vidéos' src='./images/jeuxvideo/image_starcraft_2.jpg'></a>
+	<a id='gal-serie-blackadder'><img class='gal-serie-medium' alt='serie' src='./images/serie/blackadder.jpg'></a>
+	<a id='gal-musique-queen'><img class='gal-musique-medium' alt='musique' src='./images/musique/queen.png'></a>
+	<a id='gal-voyages-dublin'><img class='gal-voyages-medium' alt='voyages' src='./images/voyages/dublin.jpg'></a>
+	<a id='gal-jv-deusex'><img class='gal-jeux-videos-medium' alt='Jeux-vidéos' src='./images/jeuxvideo/deusex.png'></a>
+	<a id='gal-film-sw'><img class='gal-film-medium' alt='film' src='./images/film/starwars.jpg'></a>
+	<a id='gal-voyages-newyork'><img class='gal-voyages-medium' alt='voyages' src='./images/voyages/newyork.jpg'></a>
+	<a id='gal-jv-tf2'><img class='gal-jeux-videos-medium' alt='Jeux-vidéos' src='./images/jeuxvideo/tf2.png'></a>
+	<a id='gal-serie-gits'><img class='gal-serie-medium' alt='serie' src='./images/serie/gits.jpg'></a>
+	<a id='gal-film-2001'><img class='gal-film-medium' alt='film' src='./images/film/2001.jpg'></a>
+	<a id='gal-jv-civ'><img class='gal-jeux-videos-medium' alt='Jeux-vidéos' src='./images/jeuxvideo/civ5.png'></a>
+	<a id='gal-musique-musclas'><img class='gal-musique-medium' alt='musique' src='./images/musique/musclas.jpg'></a>
+	<a id='gal-serie-kaamelott'><img class='gal-serie-medium' alt='serie' src='./images/serie/kaamelott.jpg'></a>
+	<a id='gal-voyages-asie'><img class='gal-voyages-medium' alt='voyages' src='./images/voyages/shanghai.jpg'></a>
+	<a id='gal-film-jiro'><img class='gal-film-medium' alt='film' src='./images/film/jiro.png'></a>
+	<a id='gal-musique-gojira'><img class='gal-musique-medium' alt='musique' src='./images/musique/Gojira.jpg'></a>
 </div>
 <div id='popup'></div>
 <script type="text/javascript">
@@ -93,11 +100,144 @@
 		});
 		
 		$('#popup').hide();
-		$('#gal-musique-led-zep').click(function(){
+		$('#gal-serie-doctor').click(function(){
 			$('#popup').bPopup({
 				content:'ajax',
 	  			contentContainer:'#popup',
-	            loadUrl: './Vue/ledzep.html'
+	            loadUrl: './Vue/Vue_Gal/doctorwho.html'
+			})
+		});
+		$('#gal-serie-blackadder').click(function(){
+			$('#popup').bPopup({
+				content:'ajax',
+	  			contentContainer:'#popup',
+	            loadUrl: './Vue/Vue_Gal/blackadder.html'
+			})
+		});
+		$('#gal-serie-gits').click(function(){
+			$('#popup').bPopup({
+				content:'ajax',
+	  			contentContainer:'#popup',
+	            loadUrl: './Vue/Vue_Gal/gits.html'
+			})
+		});
+		$('#gal-serie-kaamelott').click(function(){
+			$('#popup').bPopup({
+				content:'ajax',
+	  			contentContainer:'#popup',
+	            loadUrl: './Vue/Vue_Gal/kaamelott.html'
+			})
+		});
+		$('#gal-film-bttf').click(function(){
+			$('#popup').bPopup({
+				content:'ajax',
+	  			contentContainer:'#popup',
+	            loadUrl: './Vue/Vue_Gal/bttf.html'
+			})
+		});
+		$('#gal-film-sw').click(function(){
+			$('#popup').bPopup({
+				content:'ajax',
+	  			contentContainer:'#popup',
+	            loadUrl: './Vue/Vue_Gal/sw.html'
+			})
+		});
+		$('#gal-film-jiro').click(function(){
+			$('#popup').bPopup({
+				content:'ajax',
+	  			contentContainer:'#popup',
+	            loadUrl: './Vue/Vue_Gal/jiro.html'
+			})
+		});
+		$('#gal-film-2001').click(function(){
+			$('#popup').bPopup({
+				content:'ajax',
+	  			contentContainer:'#popup',
+	            loadUrl: './Vue/Vue_Gal/2001.html'
+			})
+		});
+		$('#gal-jv-sc2').click(function(){
+			$('#popup').bPopup({
+				content:'ajax',
+	  			contentContainer:'#popup',
+	            loadUrl: './Vue/Vue_Gal/sc2.html'
+			})
+		});
+		$('#gal-jv-deusex').click(function(){
+			$('#popup').bPopup({
+				content:'ajax',
+	  			contentContainer:'#popup',
+	            loadUrl: './Vue/Vue_Gal/deuxex.html'
+			})
+		});
+		$('#gal-jv-civ').click(function(){
+			$('#popup').bPopup({
+				content:'ajax',
+	  			contentContainer:'#popup',
+	            loadUrl: './Vue/Vue_Gal/civ.html'
+			})
+		});
+		$('#gal-jv-tf2').click(function(){
+			$('#popup').bPopup({
+				content:'ajax',
+	  			contentContainer:'#popup',
+	            loadUrl: './Vue/Vue_Gal/tf2.html'
+			})
+		});
+		$('#gal-musique-queen').click(function(){
+			$('#popup').bPopup({
+				content:'ajax',
+	  			contentContainer:'#popup',
+	            loadUrl: './Vue/Vue_Gal/queen.html'
+			})
+		});
+		$('#gal-musique-dt').click(function(){
+			$('#popup').bPopup({
+				content:'ajax',
+	  			contentContainer:'#popup',
+	            loadUrl: './Vue/Vue_Gal/dreamtheater.html'
+			})
+		});
+		$('#gal-musique-gojira').click(function(){
+			$('#popup').bPopup({
+				content:'ajax',
+	  			contentContainer:'#popup',
+	            loadUrl: './Vue/Vue_Gal/gojira.html'
+			})
+		});
+		$('#gal-musique-musclas').click(function(){
+			$('#popup').bPopup({
+				content:'ajax',
+	  			contentContainer:'#popup',
+	            loadUrl: './Vue/Vue_Gal/musclas.html'
+			})
+		});
+		$('#gal-voyages-newyork').click(function(){
+			$('#popup').bPopup({
+				content:'ajax',
+	  			contentContainer:'#popup',
+	            loadUrl: './Vue/Vue_Gal/newyork.html'
+			})
+		});
+		$('#gal-voyages-dublin').click(function(){
+			$('#popup').bPopup({
+				content:'ajax',
+	  			contentContainer:'#popup',
+	            loadUrl: './Vue/Vue_Gal/dublin.html'
+			})
+		});
+		$('#gal-voyages-londres').click(function(){
+			$('#popup').bPopup({
+				content:'ajax',
+	  			contentContainer:'#popup',
+	            loadUrl: './Vue/Vue_Gal/londres.html'
+			})
+		});
+		$('#gal-voyages-asie').click(function(){
+			$('#popup').bPopup({
+				content:'ajax',
+	  			contentContainer:'#popup',
+	            loadUrl: './Vue/Vue_Gal/asie.html'
 			})
 		});
 	});
