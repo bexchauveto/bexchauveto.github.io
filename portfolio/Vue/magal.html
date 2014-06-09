@@ -60,6 +60,15 @@
 			$('img[class^="gal-serie"]').hide();
 			$('img[class^="gal-jeux-videos"]').hide();
 			$('img[class^="gal-voyages"]').hide();
+			$.ajax({
+                type: 'GET',
+                url: './Vue/description-gal-film.html',
+                timeout: 3000,
+                success: function(data) {
+                  $('#description-gal').html(data); },
+               error: function() {
+                   alert('The query doesn\'t work'); }
+            });
 		});
 		$('#bouton-serie').click(function(){
 			$('img[class^="gal-serie"]').show();
@@ -67,6 +76,15 @@
 			$('img[class^="gal-musique"]').hide();
 			$('img[class^="gal-jeux-videos"]').hide();
 			$('img[class^="gal-voyages"]').hide();
+			$.ajax({
+                type: 'GET',
+                url: './Vue/description-gal-serie.html',
+                timeout: 3000,
+                success: function(data) {
+                  $('#description-gal').html(data); },
+               error: function() {
+                   alert('The query doesn\'t work'); }
+            });
 		});
 		$('#bouton-jeux-videos').click(function(){
 			$('img[class^="gal-jeux-videos"]').show();
@@ -74,6 +92,15 @@
 			$('img[class^="gal-serie"]').hide();
 			$('img[class^="gal-musique"]').hide();
 			$('img[class^="gal-voyages"]').hide();
+			$.ajax({
+                type: 'GET',
+                url: './Vue/description-gal-jv.html',
+                timeout: 3000,
+                success: function(data) {
+                  $('#description-gal').html(data); },
+               error: function() {
+                   alert('The query doesn\'t work'); }
+            });
 		});
 		$('#bouton-voyages').click(function(){
 			$('img[class^="gal-voyages"]').show();
@@ -81,6 +108,15 @@
 			$('img[class^="gal-film"]').hide();
 			$('img[class^="gal-serie"]').hide();
 			$('img[class^="gal-musique"]').hide();
+			$.ajax({
+                type: 'GET',
+                url: './Vue/description-gal-voayges.html',
+                timeout: 3000,
+                success: function(data) {
+                  $('#description-gal').html(data); },
+               error: function() {
+                   alert('The query doesn\'t work'); }
+            });
 		});
 		$('#bouton-all').click(function(){
 			$.ajax({
