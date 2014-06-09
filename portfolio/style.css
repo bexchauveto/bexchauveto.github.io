@@ -17,11 +17,13 @@ body {
 }
 
 #txtcontent {
-  background-color:#102472;
   padding-top:1em;
   padding-bottom: 2em;
   margin-bottom: 0em;
-  color: #fff;
+  color: #000;
+}
+#sous-menu{
+  background-color: #102472;
 }
 #cssmenu,
 #cssmenu ul,
@@ -138,6 +140,14 @@ body {
 
 footer {
   text-align: center;
+  display: block;
+  height: 20px;
+  width: auto;
+  margin: 0;
+  position: relative;
+  bottom:5px;
+  background-color: #102472;
+  color: #fff;
 }
 h2 {
   text-indent: 45px;
@@ -307,18 +317,39 @@ h3{
 }
 .dl-cv {
   text-align: center;
-  color: #fff;
+  color: #000;
 }
 
 .cv-form,
 .cv-comp,
-.cv-exp{
+.cv-exp,
+.cv-connai{
   text-indent: 90px;
 }
-.cv-form-list {
-  list-style:none;
+.cv-form-list, 
+.cv-exp-list,
+.cv-connai-list {
+  list-style-position:inside;
 }
 
-.cv-comp-table {
-  padding-left: 10%;
+table {
+  margin-left: 3cm ;
+  border:none;
+  border-collapse:collapse;
+  border-radius: 10px 10px 0 0;
+  padding: 10px;
+}
+
+#photo-moi {
+  width: 8%;
+  height: 10%;
+  border-color: #102472;
+  float: left;
+  margin-left: 3%;
+}
+.mecontact-list{
+  list-style-type: none;
+}
+.nuage {
+  text-align: center;
 }
